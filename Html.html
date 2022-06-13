@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            .red {background-color: red;}
+            .green {background-color: green;}
+        </style>
+    </head>
+    <body style="background-color: green,">
+
+        <h1>Hello WOrld</h1>
+        <button onclick="testfunc(this)" data-color="red">Button</button>
+
+
+
+
+
+
+        <script>
+
+            document.addEventListener("DOMContentLoaded", () => {
+                setInterval(function changebackground(){change(0)},1000);
+                
+            })
+
+            function change(i) {  
+            var doc = document.querySelector("BODY");
+            if (doc.style.backgroundColor == "green"){
+                doc.style.backgroundColor = "red";
+            }
+            else{
+                doc.style.backgroundColor = "green";
+                }
+
+            }
+ 
+
+
+
+
+
+
+            const change_color = (ele, color) =>{
+                if(this.color==="red"){
+                    ele.classList.remove(this.color);
+                    this.color="green";
+                    ele.classList.add(this.color);
+                }
+                else{
+                    ele.classList.remove(this.color);
+                    this.color="red";
+                    ele.classList.add(this.color);
+                }
+                console.log("i am working")
+            }
+            
+        </script>
+    </body>
+
+</html>
